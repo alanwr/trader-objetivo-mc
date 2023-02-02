@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
+st.sidebar.image('APP_MC/01 Logo_TO.png')
 
 st.title("Análise estatística")
 
@@ -30,93 +31,91 @@ data_fim = st.sidebar.date_input("Data término")
 
 amostra = 200
 
-hilo = "/APP_MC/D HiLo 7P.xlsx"
-
 # Atribuir a base de dados ao sistema operacional selecionado
 if st.sidebar.button("EXECUTAR"):    
     if opcao_selecionada == "Sistema MMA 9":
-        df = pd.read_excel('current_dir/APP_MC/gasparini.xlsx')
+        df = pd.read_excel('APP_MC/D 9.1.xlsx')
         amostra = int(df.shape[0] * 0.15)
     elif opcao_selecionada == "Canal de Keltner":
-        df = pd.read_excel('/APP_MC/D Canal de Keltner.xlsx')
+        df = pd.read_excel('APP_MC/D Canal de Keltner.xlsx')
         amostra = int(df.shape[0] * 0.15)
     elif opcao_selecionada == "Cão Farejador":
         df = pd.read_excel('APP_MC/D Cao Farejador.xlsx')
         amostra = int(df.shape[0] * 0.15)
     elif opcao_selecionada == "Cruzamento MMA 17x34":
-        df = pd.read_excel('D Cruzamento MM 17 x 34.xlsx')
+        df = pd.read_excel('APP_MC/D Cruzamento MM 17 x 34.xlsx')
         amostra = int(df.shape[0] * 0.15)
     elif opcao_selecionada == "Dave Landry":
-        df = pd.read_excel('content/APP_MC/D Dave Landry.xlsx')
+        df = pd.read_excel('APP_MC/D Dave Landry.xlsx')
         amostra = int(df.shape[0] * 0.15)
     elif opcao_selecionada == "Cruzamento Di+ Di-":
-        df = pd.read_excel('/content/APP_MC/D Di+Di-.xlsx')
+        df = pd.read_excel('APP_MC/D Di+Di-.xlsx')
         amostra = int(df.shape[0] * 0.15)
     elif opcao_selecionada == "Estocástico Lento 80x20":
-        df = pd.read_excel('C:/Users/alan/trade/APP_MC/D Estoc Lento 8p 8020.xlsx')
+        df = pd.read_excel('APP_MC/D Estoc Lento 8p 8020.xlsx')
         amostra = int(df.shape[0] * 0.15)
     elif opcao_selecionada == "Estocástico Lento 70x30":
-        df = pd.read_excel('//APP_MC/D Estocastico Lento 70 - 30.xlsx')
+        df = pd.read_excel('APP_MC/D Estocastico Lento 70 - 30.xlsx')
         amostra = int(df.shape[0] * 0.15)
     elif opcao_selecionada == "BB - Fechou Fora, Fechou Dentro":
         df = pd.read_excel('APP_MC/D Fechou Fora Fechou Dentro.xlsx')
         amostra = int(df.shape[0] * 0.15)
     elif opcao_selecionada == "HiLo 7 períodos":
-        df = pd.read_excel(hilo)
+        df = pd.read_excel('APP_MC/D HiLo 7P.xlsx')
         amostra = int(df.shape[0] * 0.15)
     elif opcao_selecionada == "IFR2 com filtro IFR14":
-        df = pd.read_excel('C:/Users/alan/trade/APP_MC/D IFR2 25 IFR14 50.xlsx')
+        df = pd.read_excel('APP_MC/D IFR2 25 IFR14 50.xlsx')
         amostra = int(df.shape[0] * 0.15)
     elif opcao_selecionada == "IFR2 (Larry Connors)":
-        df = pd.read_excel('C:/Users/alan/trade/APP_MC/D IFR2.xlsx')
+        df = pd.read_excel('APP_MC/D IFR2.xlsx')
         amostra = int(df.shape[0] * 0.15)
     elif opcao_selecionada == "IFR4 (Larry Connors)":
-        df = pd.read_excel('C:/Users/alan/trade/APP_MC/D IFR4.xlsx')
+        df = pd.read_excel('APP_MC/D IFR4.xlsx')
         amostra = int(df.shape[0] * 0.15)
     elif opcao_selecionada == "InsideBar":
-        df = pd.read_excel('C:/Users/alan/trade/APP_MC/D InsideBar.xlsx')
+        df = pd.read_excel('APP_MC/D InsideBar.xlsx')
         amostra = int(df.shape[0] * 0.15)
     elif opcao_selecionada == "Joe Biden (sem filtros)":
-        df = pd.read_excel('C:/Users/alan/trade/APP_MC/D JOE sem filtro.xlsx')
+        df = pd.read_excel('APP_MC/D JOE sem filtro.xlsx')
         amostra = int(df.shape[0] * 0.15)
     elif opcao_selecionada == "Linha das sombras":
-        df = pd.read_excel('C:/Users/alan/trade/APP_MC/D Linha da sombra.xlsx')
+        df = pd.read_excel('APP_MC/D Linha da sombra.xlsx')
         amostra = int(df.shape[0] * 0.15)
     elif opcao_selecionada == "Máximas e Mínimas":
-        df = pd.read_excel('C:/Users/alan/trade/APP_MC/D Máximas e Mínimas.xlsx')
+        df = pd.read_excel('APP_MC/D Máximas e Mínimas.xlsx')
         amostra = int(df.shape[0] * 0.15)
     elif opcao_selecionada == "Medias 3 min/max ( Larry Williams)":
-        df = pd.read_excel('C:/Users/alan/trade/APP_MC/D Medias 3 Larry.xlsx')
+        df = pd.read_excel('APP_MC/D Medias 3 Larry.xlsx')
         amostra = int(df.shape[0] * 0.15)
     elif opcao_selecionada == "Perdigão":
-        df = pd.read_excel('C:/Users/alan/trade/APP_MC/D Perdigão.xlsx')
+        df = pd.read_excel('APP_MC/D Perdigão.xlsx')
         amostra = int(df.shape[0] * 0.15)
     elif opcao_selecionada == "Preço de Fechamento de Reversão":
-        df = pd.read_excel('C:/Users/alan/trade/APP_MC/D PFR.xlsx')
+        df = pd.read_excel('APP_MC/D PFR.xlsx')
         amostra = int(df.shape[0] * 0.15)
     elif opcao_selecionada == "Stop ATR 10 períodos":
-        df = pd.read_excel('C:/Users/alan/trade/APP_MC/D Stop ATR 10p.xlsx')
+        df = pd.read_excel('APP_MC/D Stop ATR 10p.xlsx')
         amostra = int(df.shape[0] * 0.15)
     elif opcao_selecionada == "Terminator (Larry Connors)":
-        df = pd.read_excel('C:/Users/alan/trade/APP_MC/D Terminator.xlsx')
+        df = pd.read_excel('APP_MC/D Terminator.xlsx')
         amostra = int(df.shape[0] * 0.15)
     elif opcao_selecionada == "Tik Tok (com filtro)":
-        df = pd.read_excel('C:/Users/alan/trade/APP_MC/D Tik Tok Filtro Solar.xlsx')
+        df = pd.read_excel('APP_MC/D Tik Tok Filtro Solar.xlsx')
         amostra = int(df.shape[0] * 0.15)
     elif opcao_selecionada == "TikTok":
-        df = pd.read_excel('C:/Users/alan/trade/APP_MC/D TikTok.xlsx')
+        df = pd.read_excel('APP_MC/D TikTok.xlsx')
         amostra = int(df.shape[0] * 0.15)
     elif opcao_selecionada == "Turtle":
-        df = pd.read_excel('C:/Users/alan/trade/APP_MC/D Turtle.xlsx')
+        df = pd.read_excel('APP_MC/D Turtle.xlsx')
         amostra = int(df.shape[0] * 0.15)
     elif opcao_selecionada == "Joe Biden (com filtro MMA 20)":
-        df = pd.read_excel('C:/Users/alan/trade/APP_MC/D zJoe Biden.xlsx')
+        df = pd.read_excel('APP_MC/D zJoe Biden.xlsx')
         amostra = int(df.shape[0] * 0.15)
     elif opcao_selecionada == "Gambitti":
-        df = pd.read_excel('C:/Users/alan/trade/APP_MC/Dz Gambitti 0,5.xlsx')
+        df = pd.read_excel('APP_MC/Dz Gambitti 0,5.xlsx')
         amostra = int(df.shape[0] * 0.15)
     elif opcao_selecionada == "Gasparini":
-        df = pd.read_excel('C:/Users/alan/trade/APP_MC/Gasparini.xlsx')
+        df = pd.read_excel('APP_MC/Gasparini.xlsx')
         amostra = int(df.shape[0] * 0.15)
 
     else:
