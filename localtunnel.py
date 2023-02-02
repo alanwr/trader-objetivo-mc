@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 
 # Path settings
-current_dir = Path(__file__).parent if "__file__" in locals() els Path.cwd()
+current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 logo = current_dir / "APP_MC" / "01 Logo_TO.png"
 
 logo = Image.open(logo)
@@ -41,7 +41,7 @@ amostra = 200
 # Atribuir a base de dados ao sistema operacional selecionado
 if st.sidebar.button("EXECUTAR"):    
     if opcao_selecionada == "Sistema MMA 9":
-        df = pd.read_excel('/APP_MC/gasparini.xlsx')
+        df = pd.read_excel('current_dir/APP_MC/gasparini.xlsx')
         amostra = int(df.shape[0] * 0.15)
     elif opcao_selecionada == "Canal de Keltner":
         df = pd.read_excel('/content/APP_MC/D Canal de Keltner.xlsx')
