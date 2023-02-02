@@ -5,9 +5,17 @@ import streamlit as st
 import pandas as pd 
 import numpy as np
 import matplotlib.pyplot as plt
+from pathlib import Path
+
+# Path settings
+current_dir = Path(__file__).parent if "__file__" in locals() els Path.cwd()
+logo = current_dir / "APP_MC" / "01 Logo_TO.png"
+
+logo = Image.open(logo)
+
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
-st.sidebar.image('/content/APP_MC/01 Logo_TO.png')
+st.sidebar.image('logo')
 
 st.title("Análise estatística")
 
