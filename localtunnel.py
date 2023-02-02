@@ -7,7 +7,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
-st.sidebar.image('C:/Users/alan/trade/APP_MC/01 Logo_TO.png')
+st.sidebar.image('/APP_MC/01 Logo_TO.png')
 
 st.title("Análise estatística")
 
@@ -33,10 +33,10 @@ amostra = 200
 # Atribuir a base de dados ao sistema operacional selecionado
 if st.sidebar.button("EXECUTAR"):    
     if opcao_selecionada == "Sistema MMA 9":
-        df = pd.read_excel('C:/Users/alan/trade/APP_MC/gasparini.xlsx')
+        df = pd.read_excel('/APP_MC/gasparini.xlsx')
         amostra = int(df.shape[0] * 0.15)
     elif opcao_selecionada == "Canal de Keltner":
-        df = pd.read_excel('C:/Users/alan/trade/APP_MC/D Canal de Keltner.xlsx')
+        df = pd.read_excel('/APP_MC/D Canal de Keltner.xlsx')
         amostra = int(df.shape[0] * 0.15)
     elif opcao_selecionada == "Cão Farejador":
         df = pd.read_excel('C:/Users/alan/trade/APP_MC/D Cao Farejador.xlsx')
